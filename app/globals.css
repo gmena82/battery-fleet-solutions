@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  color: #0f172a;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
