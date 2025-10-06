@@ -38,7 +38,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.51.4",
     "resend": "3.3.0",
-    "zod": "3.23.8",
+    "zod": "^3.25.3",
     "clsx": "2.1.1",
     "tailwind-merge": "2.2.1",
     "@radix-ui/react-accordion": "1.1.2",
@@ -47,6 +47,9 @@
   },
   "devDependencies": {
     "@playwright/test": "1.44.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@next/eslint-plugin-next": "^15.5.4",
+    "@typescript-eslint/parser": "^8.18.0",
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "14.2.2",
     "@types/node": "20.12.7",
@@ -56,10 +59,11 @@
     "cross-env": "7.0.3",
     "dotenv": "16.4.5",
     "drizzle-kit": "0.24.2",
-    "eslint": "9.4.0",
+    "eslint": "^9.37.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-react-hooks": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "husky": "9.0.11",
     "jsdom": "24.0.0",
     "next-sitemap": "4.1.8",
@@ -72,5 +76,10 @@
     "typescript": "5.4.5",
     "vitest": "1.6.0",
     "lint-staged": "15.2.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugin-react-hooks": "^6.1.1"
+    }
   }
 }
