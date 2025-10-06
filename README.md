@@ -40,19 +40,6 @@ Tailwind v4 is loaded purely through CSS via `src/app/globals.css` using `@impor
 
 ## Project Structure
 
-Key files live at the repository root, including the workspace-level `package.json`, configuration for linting and formatting, and the Tailwind/PostCSS setup. A quick reference:
-
-```
-package.json         # pnpm scripts and dependency manifest
-postcss.config.mjs   # Tailwind CSS v4 PostCSS plugin registration
-prettier.config.js   # Prettier configuration with Tailwind plugin
-tsconfig.json        # Project-wide TypeScript settings
-next.config.mjs      # Next.js configuration
-drizzle.config.ts    # Drizzle ORM CLI configuration
-```
-
-Application code lives under `src/`:
-
 ```
 src/
   app/                # Next.js App Router routes
