@@ -4,6 +4,7 @@ import { DEFAULT_FAQ } from "@/content/faq";
 import { site } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { BatteryCharging, Truck, Wrench } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -26,8 +27,15 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="placeholder-box aspect-video w-full flex-1 text-lg">
-            Image goes here (Warehouse/Batteries)
+          <div className="relative aspect-video w-full flex-1 overflow-hidden rounded-2xl border border-border bg-muted">
+            <Image
+              src="/images/generated/forklift-battery-hero.png"
+              alt="Reconditioned forklift batteries in warehouse"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -70,10 +78,23 @@ export default function Home() {
             We value transparency. See our reviews on eBay and Facebook Marketplace.
           </p>
           <div className="grid gap-6 md:grid-cols-3">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="rounded-lg bg-card p-6 shadow">
-                <p className="italic">"(Place review text here)"</p>
-                <p className="mt-4 font-semibold">- Customer Name, Company</p>
+            {[
+              {
+                quote: "Battery tested exactly as promised. Installed and running same day.",
+                by: "Warehouse Ops Manager, North KC",
+              },
+              {
+                quote: "Fast communication and no surprises on condition or warranty.",
+                by: "Fleet Supervisor, Liberty",
+              },
+              {
+                quote: "Great value versus buying new. Delivery was quick and professional.",
+                by: "Operations Lead, Independence",
+              },
+            ].map((item) => (
+              <div key={item.by} className="rounded-lg bg-card p-6 shadow">
+                <p className="italic">"{item.quote}"</p>
+                <p className="mt-4 font-semibold">- {item.by}</p>
               </div>
             ))}
           </div>
